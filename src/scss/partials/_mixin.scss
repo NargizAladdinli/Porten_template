@@ -1,0 +1,54 @@
+@mixin Flex($j_content:null,$a_items:null,$gap:null,$f_direction:null){
+    display: flex;
+    justify-content: $j_content;
+    align-items: $a_items;
+    gap: $gap;
+    flex-direction: $f_direction;
+}
+@mixin Img($wid:null,$heit:null,$o_fit:null,$o_pos:null,$flow:null,$pos:null,$top:null,$botom:null,$z_index:null,$left:null,$right:null){
+    width: $wid;
+    height: $heit;
+    object-fit: $o_fit;
+    object-position: $o_pos;
+    overflow: $flow;
+    position: $pos;
+    top: $top;
+    bottom: $botom;
+    z-index: $z_index;
+    left: $left;
+    right: $right;
+}
+@mixin Text($t_decoration:null,$colrs:null,$f_size:null,$f_weight:null,$t_align:null,$ground:null,$border:null,$l_spacing:null,$l_heit:null,$f_style:null){
+    text-decoration: $t_decoration;
+    color: $colrs;
+    font-size: $f_size;
+    font-weight: $f_weight;
+    text-align: $t_align;
+    background: $ground;
+    border: $border;
+    letter-spacing: $l_spacing;
+    line-height: $l_heit;
+    font-style: $f_style;
+}
+@mixin Ground($ground_size:null,$ground_pos:null,$ground_color:null,$ground_repet:null){
+    background-size: $ground_size;
+    background-position: $ground_pos;
+    background-color: $ground_color;
+    background-repeat: $ground_repet;
+}
+%_fix{
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1F1F1F;
+    color: $white_clr;
+}
+%_afix{
+    text-decoration: none; 
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}

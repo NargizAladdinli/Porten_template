@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+#start .container .menu ul .fix {
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1F1F1F;
+  color: #ffffff;
+}
+
+#start .container .menu ul li a, #start .container .menu ul .fix .fix {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0F0F0F;
+  font-family: "PT Sans", sans-serif;
+}
+
+#start {
+  padding: 30px 0px;
+}
+#start .container {
+  max-width: 1140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#start .container .logo {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 54px;
+  font-style: normal;
+}
+@media (max-width: 768px) {
+  #start .container .menu {
+    display: none;
+  }
+}
+#start .container .menu ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#start .container .menu ul li {
+  width: 120px;
+  height: 40px;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+}
+#start .container .menu ul li:hover {
+  background: #1f1f1f;
+}
+#start .container .menu ul li:hover a {
+  color: #ffffff;
+}
+#start .container .menu ul li a {
+  color: #969696;
+}/*# sourceMappingURL=style.css.map */
