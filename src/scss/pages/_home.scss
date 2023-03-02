@@ -27,6 +27,7 @@
     padding: 50px 0px;
     .clock{
         @extend %_clock;
+        margin: auto;
         &::before{
             content: '';
             @include Text($ground:black,$radius:100%);
@@ -70,6 +71,21 @@
                   @include Text($ground:black,$radius:6px 6px 0 0);
                 }
             }
+        }
+    }
+    .txt{
+        text-align: center;
+        h2{
+            @include Text($t_transform:uppercase,$f_size:$size_36,$l_heit:$line_h_42,);
+            font-family: 'Playfair Display', serif;
+        }
+        p{
+            @include Text($f_style:$style_normal,$f_weight:$weight_400,$f_size:14px,$l_heit:21px);
+            padding: 50px 0px;
+        }
+        a{
+            @include Text($t_decoration:none,$colrs:$white_clr,$f_size:$size_18,$f_weight:$weight_400,$l_heit:23px,$l_spacing:0.1em,$t_transform:uppercase,$border:2px solid);
+            padding: 15px;
         }
     }
 }
