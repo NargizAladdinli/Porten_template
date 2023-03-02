@@ -18,7 +18,7 @@
     left: $left;
     right: $right;
 }
-@mixin Text($t_decoration:null,$colrs:null,$f_size:null,$f_weight:null,$t_align:null,$ground:null,$border:null,$l_spacing:null,$l_heit:null,$f_style:null){
+@mixin Text($t_decoration:null,$colrs:null,$f_size:null,$f_weight:null,$t_align:null,$ground:null,$border:null,$l_spacing:null,$l_heit:null,$f_style:null,$t_transform:null){
     text-decoration: $t_decoration;
     color: $colrs;
     font-size: $f_size;
@@ -29,12 +29,17 @@
     letter-spacing: $l_spacing;
     line-height: $l_heit;
     font-style: $f_style;
+    text-transform: $t_transform;
 }
-@mixin Ground($ground_size:null,$ground_pos:null,$ground_color:null,$ground_repet:null){
-    background-size: $ground_size;
-    background-position: $ground_pos;
-    background-color: $ground_color;
-    background-repeat: $ground_repet;
+%_ground{
+    width: 100%;
+    height: 810px;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 %_fix{
     width: 120px;
