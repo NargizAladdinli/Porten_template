@@ -18,7 +18,7 @@
     left: $left;
     right: $right;
 }
-@mixin Text($t_decoration:null,$colrs:null,$f_size:null,$f_weight:null,$t_align:null,$ground:null,$border:null,$l_spacing:null,$l_heit:null,$f_style:null,$t_transform:null){
+@mixin Text($t_decoration:null,$colrs:null,$f_size:null,$f_weight:null,$t_align:null,$ground:null,$border:null,$l_spacing:null,$l_heit:null,$f_style:null,$t_transform:null,$radius:null){
     text-decoration: $t_decoration;
     color: $colrs;
     font-size: $f_size;
@@ -30,6 +30,7 @@
     line-height: $l_heit;
     font-style: $f_style;
     text-transform: $t_transform;
+    border-radius: $radius;
 }
 %_ground{
     width: 100%;
@@ -56,4 +57,22 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
+}
+%_clock{
+    width: 350px;
+    height: 350px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 4px solid $bd_clr;
+    border-radius: 50%;
+    box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+    inset 0 -15px 15px rgba(255, 255, 255, 0.05),
+    0 15px 15px rgba(0, 0, 0, 0.3),
+    inset 0 15px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

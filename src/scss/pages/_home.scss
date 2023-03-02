@@ -23,7 +23,58 @@
         }
     }
 }
+#watch{
+    padding: 50px 0px;
+    .clock{
+        @extend %_clock;
+        &::before{
+            content: '';
+            @include Text($ground:black,$radius:100%);
+            @include Img($wid:15px,$heit:15px,$pos:absolute,$z_index:111);
+        }
+        .hour{
+            position: absolute;
+            .hours{
+                border-radius: 50%;
+                @include Img($wid:160px,$heit:160px,$pos:relative);
+                @include Flex($j_content:center);
+                &::before{
+                    content: '';
+                    @include Img($pos:absolute,$wid:7px,$heit:80px,$z_index:10);
+                    @include Text($ground:$ff_clr,$radius:6px 6px 0 0);
+                }
+            }
+        }
+        .minute{
+            position: absolute;
+            .minutes{
+                border-radius: 50%;
+                @include Img($wid:190px,$heit:190px,$pos:relative);
+                @include Flex($j_content:center);
+                &::before{
+                  content: '';
+                  @include Img($pos:absolute,$wid:4px,$heit:90px,$z_index:11);
+                  @include Text($ground:black,$radius:6px 6px 0 0);
+                }
+            }
+        }
+        .second{
+            position: absolute;
+            .seconds{
+                border-radius: 50%;
+                @include Img($wid:230px,$heit:230px,$pos:relative);
+                @include Flex($j_content:center);
+                &::before{
+                  content: '';
+                  @include Img($pos:absolute,$wid:2px,$heit:150px,$z_index:12);
+                  @include Text($ground:black,$radius:6px 6px 0 0);
+                }
+            }
+        }
+    }
+}
 #cataloq{
+    padding: 50px 0px;
     .container{
         max-width: 1500px;
         h2{

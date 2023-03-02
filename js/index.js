@@ -1,3 +1,4 @@
+//Mock Data in JS
 const data = [
     {
         img:"https://transform.octanecdn.com/fitLogo/525x425/https://dynamix-cdn.s3.amazonaws.com/jacobandcocom/jacobandcocom_500960893.png",
@@ -29,3 +30,26 @@ data.map((el) => {
     </div>
     `
 })
+
+
+
+// Watch In JS
+function clock() {
+const hoursArrow = document.querySelector('.hours');
+const minutesArrow = document.querySelector('.minutes');
+const secondsArrow = document.querySelector('.seconds');
+const deg = 6
+
+setInterval(() => {
+    const day = new Date();
+    
+    const hours = day.getHours() * 30
+    const minutes = day.getMinutes() * deg
+    const seconds = day.getSeconds() * deg
+
+    hoursArrow.style.transform = `rotateZ(${hours + (minutes / 12)}deg)`
+    minutesArrow.style.transform = `rotateZ(${minutes}deg)`
+    secondsArrow.style.transform = `rotateZ(${seconds}deg)`
+}, 0);
+}
+clock();
