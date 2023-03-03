@@ -92,15 +92,13 @@
 #cataloq{
     padding: 50px 0px;
     .container{
-        max-width: 1500px;
         h2{
             font-family: 'Playfair Display', serif;
             @include Text($f_size:$size_36,$l_heit:$line_h_42,$t_align:center);
         }
         .img_cart{
             background: $watch_color;
-            width: 100%;
-            overflow: hidden;
+            @include Img($wid:100%,$flow:hidden);
             &:hover{
                 img{ transform: scale(1.05); }
             }
@@ -118,6 +116,51 @@
         .img{
             width: 100%;
             img{ @include Img($wid:100%,$heit:100%,$o_fit:cover); }
+        }
+    }
+}
+#clock{
+    .container{
+        max-width: 1140px;
+        h2{
+            @include Text($t_align:center,$t_transform:uppercase,$f_size:$size_36,$l_heit:$line_h_42);
+            font-family: 'Playfair Display', serif;
+            padding: 50px 0px;
+        }
+        .img_cart{
+            background: $watch_color;
+            @include Img($wid:100%,$flow:hidden,$pos:relative);
+            &:hover{
+                .img1{
+                    transform: scale(1.03);
+                    opacity: 0;
+                }
+                .img_hover{
+                    opacity: 1;
+                    transform: scale(1.03);
+                }
+            }
+            .img1{
+                @include Img($wid:100%,$heit:100%, $o_fit:cover);
+                transition: .6s ease-in-out;
+                transform: scale(1);
+                opacity: 1;
+            }
+            .img_hover{
+                @include Img($wid:100%,$pos:absolute,$top:0,$left:0);
+                transition: .6s ease-in-out;
+                opacity: 0;
+                transform: scale(1);
+                .img2{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .txt{
+            padding: 10px 0px;
+            font-family: 'Playfair Display', serif;
+            @include Text($f_size:$size_18,$l_heit:$line_h_21);
         }
     }
 }
